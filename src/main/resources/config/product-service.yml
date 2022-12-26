@@ -1,0 +1,50 @@
+file-save-path: /Users/zemin.yan/Desktop/images/
+#  ${path} //把动态的value定义为变量，后面的yml去覆盖相应的变量值（ie：path：${xxxx}）
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${server.port}
+spring:
+  application:
+    name: product-service
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+      ddl-auto: update
+    open-in-view: true
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/product_db?CreateDatabaseIfNotExist=true
+    username: root
+    password: password
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      schema: resources/db/migration
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10485760
+  hystrix:
+    command:
+      default:
+        execution:
+          isolation:
+            strategy: SEMAPHORE
+            thread:
+              timeoutInMilliseconds: 10000
+
+
