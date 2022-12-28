@@ -1,17 +1,21 @@
-server:
-  port: 8082
-  tomcat:
-    uri-encoding: UTF-8
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
 spring:
   application:
     name: notification-service
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+  datasource:
+    url: jdbc:mysql://localhost:3307/user_db?CreateDatabaseIfNotExist=true
+    username: root
+    password: password
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      schema: resources/db/migration
+  flyway:
+    enabled: true
   mail:
     from: 476865287@qq.com
     host: smtp.qq.com

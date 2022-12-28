@@ -1,21 +1,8 @@
-file-save-path: /Users/zemin.yan/Desktop/images/
 server:
   port: 8080
-  tomcat:
-    uri-encoding: UTF-8
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    register-with-eureka: true
-    fetch-registry: true
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
-    instance-id: ${server.port}
 spring:
   application:
-    name: product-service
+     name: product-service
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
@@ -33,10 +20,6 @@ spring:
       schema: resources/db/migration
   flyway:
     enabled: true
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 10485760
   hystrix:
     command:
       default:
@@ -45,5 +28,13 @@ spring:
             strategy: SEMAPHORE
             thread:
               timeoutInMilliseconds: 10000
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10485760
+file-save-path: /Users/zemin.yan/Desktop/images/
+
+
+
 
 
