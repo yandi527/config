@@ -16,7 +16,4 @@
 #      enabled: true
 #      max-file-size: 10485760
 #file-save-path: /Users/zemin.yan/Desktop/images/
-spring:
-  jpa:
-    datasource:
-      password: 123456
+password: 123456
