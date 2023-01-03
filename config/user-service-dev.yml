@@ -1,1 +1,7 @@
-password: password
+jpa:
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+  url: jdbc:mysql://localhost:3308/new_user_db?CreateDatabaseIfNotExist=true
+  username: root
+  password: password
+  enable: true
+  show-sql: true
