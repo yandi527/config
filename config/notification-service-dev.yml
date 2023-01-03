@@ -10,7 +10,7 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
   datasource:
-    url: jdbc:mysql://localhost:3307/user_db?CreateDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3308/new_user_db?CreateDatabaseIfNotExist=true
     username: root
     password: password
     driverClassName: com.mysql.cj.jdbc.Driver
