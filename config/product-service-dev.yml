@@ -1,40 +1,22 @@
-server:
-  port: 8080
+#server:
+#  port: 8080
+#spring:
+#  application:
+#     name: product-service
+#  hystrix:
+#    command:
+#      default:
+#        execution:
+#          isolation:
+#            strategy: SEMAPHORE
+#            thread:
+#              timeoutInMilliseconds: 10000
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 10485760
+#file-save-path: /Users/zemin.yan/Desktop/images/
 spring:
-  application:
-     name: product-service
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
-      ddl-auto: update
-    open-in-view: true
-    show-sql: true
-  datasource:
-    url: jdbc:mysql://localhost:3306/product_db?CreateDatabaseIfNotExist=true
-    username: root
-    password: password
-    driverClassName: com.mysql.cj.jdbc.Driver
-    hikari:
-      schema: resources/db/migration
-  flyway:
-    enabled: true
-  hystrix:
-    command:
-      default:
-        execution:
-          isolation:
-            strategy: SEMAPHORE
-            thread:
-              timeoutInMilliseconds: 10000
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 10485760
-file-save-path: /Users/zemin.yan/Desktop/images/
-
-
-
-
-
+    datasource:
+      password: 123456
