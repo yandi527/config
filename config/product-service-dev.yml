@@ -1,9 +1,9 @@
 path:  /Users/zemin.yan/Desktop/images/
 jpa:
   database-platform: org.hibernate.dialect.MySQL8Dialect
-  url: jdbc:mysql://localhost:3306/product_db?CreateDatabaseIfNotExist=true
+  url: jdbc:mysql://localhost:3307/product_db?CreateDatabaseIfNotExist=true
   username: root
-  password: 123456
+  password: password
   open-in-view: true
   show-sql: true
   enable: true
